@@ -1,0 +1,28 @@
+{
+    "family": "helloworldgvnewtask",
+    "containerDefinitions": [
+        {
+            "name": "helloworldgvnewcontainer",
+            "image": "717904358179.dkr.ecr.us-east-2.amazonaws.com/helloworldgvnewrepo:latest",
+            "cpu": 10,
+            "memory": 1024,
+            "portMappings": [
+                {
+                    "containerPort": 8080,
+                    "hostPort": 0
+                }
+            ],
+			"environment": [
+			  {
+				"name": "Name",
+				"value": "Goutham"
+			  }
+      
+			],
+
+            "essential": true
+        }
+    ],
+        "taskRoleArn": "arn:aws:iam::717904358179:role/bwce-demorole",
+    "networkMode": "bridge"
+}
